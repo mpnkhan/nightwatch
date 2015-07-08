@@ -2,20 +2,19 @@
   "name": "nightwatch",
   "description": "A node.js bindings implementation for selenium 2.0/webdriver",
   "version": "0.7.6",
-  "author": {
-    "name": "Andrei Rusu",
-    "email": "andrei@nightwatchjs.org"
-  },
+  "author": "Andrei Rusu <andrei@nightwatchjs.org>",
   "homepage": "http://nightwatchjs.org",
   "main": "./lib/index.js",
   "licenses": {
     "type": "MIT",
     "url": "https://raw.github.com/nightwatchjs/nightwatch/master/LICENSE"
   },
-  "bugs": "https://github.com/nightwatchjs/nightwatch/issues",
+  "bugs": {
+    "url": "https://github.com/nightwatchjs/nightwatch/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:nightwatchjs/nightwatch.git"
+    "url": "git+ssh://git@github.com/nightwatchjs/nightwatch.git"
   },
   "dependencies": {
     "ejs": "~0.8.3",
@@ -38,6 +37,7 @@
     "grunt-jsonlint": "~1.0.4",
     "grunt-complexity": "^0.1.7",
     "grunt-npm-release": "latest",
+    "request" : "2.58.0",
     "nock": "~0.45.0"
   },
   "bin": {
@@ -45,8 +45,13 @@
   },
   "man": "",
   "scripts": {
-    "jshint": "./node_modules/.bin/jshint --verbose --config .jshintrc lib/",
+    "jshint": "jshint --verbose --config .jshintrc lib/",
     "coverage": "jscoverage lib --exclude *.ejs,*.json && NIGHTWATCH_COV=1 node ./tests/run_tests.js lcov > ./lib-cov/lcov.info",
     "test": "node ./tests/run_tests.js"
-  }
+  },
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "license": "ISC"
 }

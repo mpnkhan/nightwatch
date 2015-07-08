@@ -25,6 +25,7 @@ $ npm install
 The tests for nightwatch are written using [nodeunit](https://github.com/caolan/nodeunit) as the test framework. To run the nodeunit tests do:
 ```sh
 $ npm test
+$ nightwatch --debug --test tests/demo.js
 ```
 
 ### Discuss
